@@ -1,3 +1,6 @@
+package Object;
+import Kaiju.Kaiju;
+
 public interface IDamage {
-    int reduceHealth();
+    void reduceHealth(Kaiju kaiju);
 }

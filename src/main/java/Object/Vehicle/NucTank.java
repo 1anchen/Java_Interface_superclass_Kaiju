@@ -1,4 +1,6 @@
-package Vehicle;
+package Object.Vehicle;
+import Kaiju.*;
+import Object.*;
 
 public class NucTank extends Vehicle implements IDamage {
 
@@ -10,7 +12,11 @@ public class NucTank extends Vehicle implements IDamage {
         return  200;
     }
 
-    public int reduceHealth(){
+    public void reduceHealth(Kaiju kaiju){
+        this.healthValue -= kaiju.getAttackPower();
 
     }
+
+
+
 }

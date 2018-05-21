@@ -1,14 +1,21 @@
-package Building;
+package Object.Building;
+import Object.*;
+import Kaiju.*;
 
-public class Building {
+public class Building implements IDamage{
 
-    int healthvalue;
+    protected int healthValue;
 
     public Building(){
-        this.healthvalue = 200;
+        this.healthValue = 200;
     }
 
-    public int getHealthvalue(){
-        return this.healthvalue;
+    public int getHealthValue(){
+        return this.healthValue;
+    }
+
+    public void reduceHealth(Kaiju kaiju){
+        this.healthValue -= kaiju.getAttackPower();
+
     }
 }

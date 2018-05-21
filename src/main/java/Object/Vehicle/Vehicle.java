@@ -1,4 +1,4 @@
-package Vehicle;
+package Object.Vehicle;
 
 public abstract class Vehicle {
     protected String type;
