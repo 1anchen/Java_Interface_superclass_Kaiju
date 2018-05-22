@@ -33,7 +33,7 @@ public class TankTest {
 
     @Test
     public void canReduceHealth() {
-        tank.reduceHealth(knifehead);
+        tank.reduceHealth(20);
         Assert.assertEquals(40, tank.getHealthValue());
     }
 }

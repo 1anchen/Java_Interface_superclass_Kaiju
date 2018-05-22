@@ -47,7 +47,8 @@ public class KnifeheadTest
 
     @Test
     public void canAttack()  {
-        assertEquals(60,knifehead.attack(knifehead.fly()));
+        knifehead.attack(building1);
+        assertEquals(180,building1.getHealthValue());
     }
 
     @Test
@@ -68,6 +69,12 @@ public class KnifeheadTest
         knifehead.addToDamagedThings(nucTank);
         assertEquals(2, knifehead.getDamagedThings());
     }
+
+   @Test
+    public void canReallyFly(){
+        assertEquals(true, knifehead.canFly());
+   }
+
 
 
 }

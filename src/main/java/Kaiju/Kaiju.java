@@ -20,7 +20,7 @@ public abstract class Kaiju {
     }
 
     public abstract String roar();
-    public abstract int attack(int move);
+    public abstract void attack(IDamage object);
 
 
     public String getName(){

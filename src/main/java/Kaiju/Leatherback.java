@@ -1,4 +1,7 @@
 package Kaiju;
+import Object.IDamage;
+
+import java.util.Random;
 
 public class Leatherback extends Kaiju{
 
@@ -11,11 +14,24 @@ public class Leatherback extends Kaiju{
         return "LaaLaa";
     }
 
-    public int attack(int jump){
-        return getAttackPower() * jump;
+    public void attack(IDamage object){
+        object.reduceHealth(this.attackPower*jump());
     }
 
-    public int jump(){
-        return 2;
+
+    public int jump() {
+        if (canJump()) {
+            return 2;
+        }
+        return 1;
+    }
+
+    public boolean canJump(){
+        Random ran = new Random();
+        int factor= ran.nextInt(1) + 9; ;
+        if(factor > 6){
+            return true;
+        }
+        return false;
     }
 }

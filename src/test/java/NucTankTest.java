@@ -34,7 +34,7 @@ public class NucTankTest {
 
     @Test
     public void canReduceHealth() {
-        nucTank.reduceHealth(knifehead);
+        nucTank.reduceHealth(20);
         Assert.assertEquals(30, nucTank.getHealthValue());
     }
 }

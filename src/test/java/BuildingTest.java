@@ -28,7 +28,7 @@ public class BuildingTest {
 
     @Test
     public void canReduceHealth() {
-        building1.reduceHealth(knifehead);
+        building1.reduceHealth(20);
         Assert.assertEquals(180, building1.getHealthValue());
     }
 

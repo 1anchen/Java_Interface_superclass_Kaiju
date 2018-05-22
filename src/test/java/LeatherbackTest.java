@@ -3,44 +3,54 @@ import Kaiju.Leatherback;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import Object.Building.Building;
+
+import static org.junit.Assert.assertEquals;
 
 public class LeatherbackTest {
 
     Leatherback leatherback;
+    Building building1;
 
     @Before
     public void before(){
         leatherback = new Leatherback("Luis","leatherback",200,30);
-
+        building1 = new Building();
     }
 
     @Test
     public void canGetName(){
-        Assert.assertEquals("Luis",leatherback.getName());
+        assertEquals("Luis",leatherback.getName());
     }
 
     @Test
     public void canGetType(){
-        Assert.assertEquals("leatherback",leatherback.getType());
+        assertEquals("leatherback",leatherback.getType());
     }
 
     @Test
     public void canGetHealthValue(){
-        Assert.assertEquals(200,leatherback.getHealthValue());
+        assertEquals(200,leatherback.getHealthValue());
     }
 
     @Test
     public void canGetAttackValue(){
-        Assert.assertEquals(30,leatherback.getAttackPower());
+        assertEquals(30,leatherback.getAttackPower());
     }
 
     @Test
     public void canRoar()  {
-        Assert.assertEquals("LaaLaa",leatherback.roar());
+        assertEquals("LaaLaa",leatherback.roar());
     }
 
     @Test
     public void canAttack()  {
-        Assert.assertEquals(60,leatherback.attack(leatherback.jump()));
+        leatherback.attack(building1);
+        assertEquals(140,building1.getHealthValue());
+    }
+
+    @Test
+    public void canReallyJump(){
+        assertEquals(true,leatherback.canJump());
     }
 }

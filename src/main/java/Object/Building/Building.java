@@ -14,8 +14,8 @@ public class Building implements IDamage{
         return this.healthValue;
     }
 
-    public void reduceHealth(Kaiju kaiju){
-        this.healthValue -= kaiju.getAttackPower();
+    public void reduceHealth(int attackValue){
+        this.healthValue -= attackValue;
 
     }
 }

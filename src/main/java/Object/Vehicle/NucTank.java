@@ -12,8 +12,8 @@ public class NucTank extends Vehicle implements IDamage {
         return  200;
     }
 
-    public void reduceHealth(Kaiju kaiju){
-        this.healthValue -= kaiju.getAttackPower();
+    public void reduceHealth(int attackValue){
+        this.healthValue -= attackValue;
 
     }
 

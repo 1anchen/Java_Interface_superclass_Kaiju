@@ -12,8 +12,8 @@ public class Tank extends Vehicle implements IDamage {
         return  20;
     }
 
-    public void reduceHealth(Kaiju kaiju){
-        this.healthValue -= kaiju.attack(kaiju.getAttackPower());
+    public void reduceHealth(int attackValue){
+        this.healthValue -= attackValue;
 
     }
 }
